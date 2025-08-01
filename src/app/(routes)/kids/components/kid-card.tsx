@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Kid, VisitorFrom } from "@/types/kid";
+import { Kid } from "@/types/kid";
 
 export default function KidCard({ kid }: { kid: Kid }) {
   return ( 
@@ -39,7 +39,7 @@ export default function KidCard({ kid }: { kid: Kid }) {
           </p>
           <p>
             <span className="font-semibold">Procedencia:</span>{' '}
-            {kid.visitorFrom === VisitorFrom.iglesia ? 'Iglesia' : 'Nuevo'}
+            {kid.visitorFrom}
           </p>
         </div>
       </CardContent>

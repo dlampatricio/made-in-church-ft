@@ -17,13 +17,15 @@ export default function KidsPage() {
   }
 
   return (
-    <div className="container mx-auto py-8">
-      <h1 className="text-center text-3xl font-bold mb-8">Lista de Niños</h1>
+    <div className="container mx-auto py-12 px-4">
+      <h1 className="text-4xl font-bold mb-12 text-center text-gray-800">
+        Nuestros <span className="text-purple-700">Niños</span>
+      </h1>
       
       {loading ? (
         <KidSkeleton />
       ) : kids.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {kids.map((kid) => (
             <KidCard key={kid.slug} kid={kid} />
           ))}
